@@ -31,7 +31,7 @@ export default {
   <main>
     <div class="container">
       
-    <h1>Hello</h1>
+      <h1>Hello</h1>
 
       <div class="row g-3">
         <div class="col-3" v-for="project in projects.data">
