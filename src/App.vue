@@ -10,7 +10,7 @@ export default {
   },
   mounted() {
     axios
-    .get('')
+    .get(this.base_url + this.api_url)
     .then(response => {
       console.log(response);
       this.projects = response.data.result
