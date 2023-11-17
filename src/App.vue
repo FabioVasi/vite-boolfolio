@@ -11,16 +11,16 @@ export default {
   },
   methods: {
     getPosts() {
-      const url = this.base_url + this.api_url;
+      const complete_url = this.base_url + this.api_url;
       axios
-      .get(url)
-      .then(response => {
-        console.log(response);
-        this.projects = response.data.result;
-      })
-      .catch(err => {
-        console.error(err);
-      })
+        .get(complete_url)
+        .then(response => {
+          console.log(response);
+          this.projects = response.data.result
+        })
+        .catch(error => {
+          console.error(error);
+        })
 
     }
   }
@@ -50,8 +50,8 @@ export default {
             <div class="card">
               <h4>{{ project.title }}</h4>
               <div class="card-body">
-                {{ project.content }}
-                <h2>hola</h2>
+
+
               </div>
             </div>
 
