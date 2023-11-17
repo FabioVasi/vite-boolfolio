@@ -1,4 +1,5 @@
 <script>
+import axios from "axios";
 export default {
   name: 'App',
   data() {
@@ -8,16 +9,24 @@ export default {
       projects: []
     }
   },
+  methods: {
+    getPosts() {
+      const url = this.base_url + this.api_url;
+      axios
+      .get(url)
+      .then(response => {
+        console.log(response);
+        this.projects = response.data.result;
+      })
+      .catch(err => {
+        console.error(err);
+      })
+
+    }
+  }
+  ,
   mounted() {
-    axios
-    .get(this.base_url + this.api_url)
-    .then(response => {
-      console.log(response);
-      this.projects = response.data.result
-    })
-    .catch(err => {
-      console.error(err);
-    })
+    this.getPosts();
   }
 }
 </script>
@@ -29,19 +38,29 @@ export default {
   </header>
 
   <main>
-    <div class="container">
-      
-      <h1>Hello</h1>
+    <section class="project">
 
-      <div class="row g-3">
-        <div class="col-3" v-for="project in projects.data">
-          <div class="card">
-            <h4>{{ project.title }}</h4>
-            <div class="card-body"></div>
+      <div class="container">
+      
+        <h1>Hello world</h1>
+
+        <div class="row g-3">
+          <div class="col" v-for="project in projects.data">
+
+            <div class="card">
+              <h4>{{ project.title }}</h4>
+              <div class="card-body">
+                {{ project.content }}
+                <h2>hola</h2>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
-    </div>
+
+    </section>
+
   </main>
 
   <footer>
