@@ -1,41 +1,40 @@
 <script>
 import axios from "axios";
-export default {
-  name: 'App',
-  data() {
-    return {
-      base_url: 'http://127.0.0.1:8000',
-      api_url: '/api/projects',
-      projects: [],
-    }
-  },
-  methods: {
-    getPosts() {
-      const complete_url = this.base_url + this.api_url;
-      axios
-        .get(complete_url)
-        .then(response => {
-          console.log(response);
-          this.projects = response.data.result
-        })
-        .catch(error => {
-          console.error(error);
-        })
+import AppHeader from "./components/AppHeader.vue";
 
-    }
-  }
-  ,
-  mounted() {
-    this.getPosts();
-  }
+export default {
+    name: 'App',
+    data() {
+        return {
+            base_url: 'http://127.0.0.1:8000',
+            api_url: '/api/projects',
+            projects: [],
+        };
+    },
+    methods: {
+        getPosts() {
+            const complete_url = this.base_url + this.api_url;
+            axios
+                .get(complete_url)
+                .then(response => {
+                console.log(response);
+                this.projects = response.data.result;
+            })
+                .catch(error => {
+                console.error(error);
+            });
+        }
+    },
+    mounted() {
+        this.getPosts();
+    },
+    components: { AppHeader }
 }
 </script>
 
 <template>
 
-  <header>
-
-  </header>
+  <AppHeader></AppHeader>
 
   <main>
     <section class="project">
@@ -51,12 +50,12 @@ export default {
               <img class="img-card-top" :src="project.image" alt="">
               
               <div class="card-body">
-              <h3>{{ project.title }}</h3>
-              <a href="{{ project.github }}">{{ project.github }}</a>
-              <a href="{{ project.second_link }}">{{ project.second_link }}</a>
-              <h4 v-for="type in project.types">{{ type.name }}</h4>
-              <h4 v-for="technology in project.technologies">{{ technology.name }}</h4>
-              <h4>{{ project.content }}</h4>
+                <h3>{{ project.title }}</h3>
+                <a href="{{ project.github }}">{{ project.github }}</a>
+                <a href="{{ project.second_link }}">{{ project.second_link }}</a>
+                <h4 v-for="type in project.types">{{ type.name }}</h4>
+                <h4 v-for="technology in project.technologies">{{ technology.name }}</h4>
+                <h4>{{ project.content }}</h4>
               </div>
             </div>
 
