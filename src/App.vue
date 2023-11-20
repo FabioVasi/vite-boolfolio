@@ -44,14 +44,19 @@ export default {
       
         <h1>Hello world</h1>
 
-        <div class="row g-3">
-          <div class="col" v-for="project in projects.data">
+        <div class="row g-4">
+          <div class="col-4" v-for="project in projects.data">
 
-            <div class="card">
-              <h4>{{ project.title }}</h4>
+            <div class="card h-100">
+              <img class="img-card-top" :src="project.image" alt="">
+              
               <div class="card-body">
-
-
+              <h3>{{ project.title }}</h3>
+              <a href="{{ project.github }}">{{ project.github }}</a>
+              <a href="{{ project.second_link }}">{{ project.second_link }}</a>
+              <!--<h4>{{ project.types[] }}</h4>-->
+              <h4>{{ project.technologies[] }}</h4>
+              <h4>{{ project.content }}</h4>
               </div>
             </div>
 
