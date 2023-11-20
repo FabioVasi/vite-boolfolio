@@ -9,9 +9,9 @@ export default {
     <header>
         <nav class="navbar navbar-expand navbar-light bg-light">
             <div class="nav navbar-nav">
-                <a class="nav-item nav-link" href="#">Home</a>
-                <a class="nav-item nav-link" href="#">About</a>
-                <a class="nav-item nav-link" href="#">Contacts</a>
+                <router-link class="nav-item nav-link" to="/">Home</router-link>
+                <router-link class="nav-item nav-link" to="/About">About</router-link>
+                <router-link class="nav-item nav-link" to="/Contacts">Contacts</router-link>
             </div>
         </nav>
     </header>
