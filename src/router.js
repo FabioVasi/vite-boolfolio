@@ -5,9 +5,9 @@ import AboutView from "./views/AboutView.vue";
 import ContactsView from "./views/ContactsView.vue";
 
 const routes = [
-    {path: '/', name: 'HomeView', component: HomeView},
-    {path: '/About', name: 'Aboutview', component: AboutView},
-    {path: '/Contacts', name: 'ContactsView', component: ContactsView},
+    {path: '/', name: 'Home', component: HomeView},
+    {path: '/About', name: 'About', component: AboutView},
+    {path: '/Contacts', name: 'Contacts', component: ContactsView},
 ];
 
 const router = createRouter({
