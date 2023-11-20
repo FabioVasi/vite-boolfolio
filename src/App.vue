@@ -6,7 +6,7 @@ export default {
     return {
       base_url: 'http://127.0.0.1:8000',
       api_url: '/api/projects',
-      projects: []
+      projects: [],
     }
   },
   methods: {
@@ -54,8 +54,8 @@ export default {
               <h3>{{ project.title }}</h3>
               <a href="{{ project.github }}">{{ project.github }}</a>
               <a href="{{ project.second_link }}">{{ project.second_link }}</a>
-              <!--<h4>{{ project.types[] }}</h4>-->
-              <h4>{{ project.technologies[] }}</h4>
+              <h4 v-for="type in project.types">{{ type.name }}</h4>
+              <h4 v-for="technology in project.technologies">{{ technology.name }}</h4>
               <h4>{{ project.content }}</h4>
               </div>
             </div>
