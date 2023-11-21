@@ -12,9 +12,9 @@ export default {
     },
     methods: {
         getPosts() {
-            const complete_url = this.base_url + this.api_url;
+            const url = this.base_url + this.api_url;
             axios
-                .get(complete_url)
+                .get(url)
                 .then(response => {
                 console.log(response);
                 this.projects = response.data.result;

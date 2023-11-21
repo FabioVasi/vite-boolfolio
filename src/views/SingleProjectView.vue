@@ -40,7 +40,7 @@ export default {
                 <p>{{ project.content }}</p>
                 
                 <div class="metadata">
-                    <div class="type" v-if="project.type">
+                    <div class="type" v-if="project.types">
                         <h5>Type: {{ project.type.name }}</h5> 
                     </div>
                     <div class="technologies" v-if="project.technologies.length > 0">
