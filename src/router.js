@@ -15,7 +15,9 @@ const routes = [
     {path: '/About', name: 'About', component: AboutView},
     {path: '/Blog', name: 'Blog', component: BlogView},
     {path: '/Contacts', name: 'Contacts', component: ContactsView},
-
+    {path: '/Blog/:slug', name: 'project', component: SingleProjectView},
+    {path: '/types/:slug', name: 'type', component: SingleTypeView},
+    {path: '/technologies/:slug', name: 'technology', component: SingleTechnologyView},
     {path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFoundView}
 ];
 
