@@ -33,11 +33,11 @@ export default {
 <template>
     
 
-    <section class="project">
+    <section class="project py-5">
 
         <div class="container text-center">
         
-            <h1>Projects List</h1>
+            <h1 class="pb-5">Projects List</h1>
 
             <div class="row g-4">
                 <div class="col-4" v-for="project in projects.data">
