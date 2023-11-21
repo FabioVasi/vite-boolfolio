@@ -5,7 +5,6 @@ export default {
     name: 'App',
     components: {
       AppHeader,
-
     }
 }
 </script>
@@ -20,65 +19,65 @@ export default {
 
   </main>
   
-  <footer class="bg-secondary py-4 text-white">
+  <footer class="bg-dark py-2">
     <div class="container">
       <div class="row">
         <div class="col-4">
-          <ul class="list-unslyled">
+          <ul class="list-unstyled">
             <li>
-              <a href="#">Lorem</a>
+              <a class="text-white text-decoration-none" href="#">Lorem</a>
             </li>
             <li>
-              <a href="#">Lorem</a>
+              <a class="text-white text-decoration-none" href="#">Lorem</a>
             </li>
             <li>
-              <a href="#">Lorem</a>
+              <a class="text-white text-decoration-none" href="#">Lorem</a>
             </li>
             <li>
-              <a href="#">Lorem</a>
+              <a class="text-white text-decoration-none" href="#">Lorem</a>
             </li>
             <li>
-              <a href="#">Lorem</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="col-4">
-          <ul class="list-unslyled">
-            <li>
-              <a href="#">Lorem</a>
-            </li>
-            <li>
-              <a href="#">Lorem</a>
-            </li>
-            <li>
-              <a href="#">Lorem</a>
-            </li>
-            <li>
-              <a href="#">Lorem</a>
-            </li>
-            <li>
-              <a href="#">Lorem</a>
+              <a class="text-white text-decoration-none" href="#">Lorem</a>
             </li>
           </ul>
         </div>
 
         <div class="col-4">
-          <ul class="list-unslyled">
+          <ul class="list-unstyled">
             <li>
-              <a href="#">Lorem</a>
+              <a class="text-white text-decoration-none" href="#">Lorem</a>
             </li>
             <li>
-              <a href="#">Lorem</a>
+              <a class="text-white text-decoration-none" href="#">Lorem</a>
             </li>
             <li>
-              <a href="#">Lorem</a>
+              <a class="text-white text-decoration-none" href="#">Lorem</a>
             </li>
             <li>
-              <a href="#">Lorem</a>
+              <a class="text-white text-decoration-none" href="#">Lorem</a>
             </li>
             <li>
-              <a href="#">Lorem</a>
+              <a class="text-white text-decoration-none" href="#">Lorem</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-4">
+          <ul class="list-unstyled">
+            <li>
+              <a class="text-white text-decoration-none" href="#">Lorem</a>
+            </li>
+            <li>
+              <a class="text-white text-decoration-none" href="#">Lorem</a>
+            </li>
+            <li>
+              <a class="text-white text-decoration-none" href="#">Lorem</a>
+            </li>
+            <li>
+              <a class="text-white text-decoration-none" href="#">Lorem</a>
+            </li>
+            <li>
+              <a class="text-white text-decoration-none" href="#">Lorem</a>
             </li>
           </ul>
         </div>

@@ -7,7 +7,6 @@ import ContactsView from "./views/ContactsView.vue";
 import SingleProjectView from "./views/SingleProjectView.vue";
 import SingleTypeView from "./views/SingleTypeView.vue";
 import SingleTechnologyView from "./views/SingleTechnologyView.vue";
-
 import NotFoundView from "./views/NotFoundView.vue";
 
 const routes = [
