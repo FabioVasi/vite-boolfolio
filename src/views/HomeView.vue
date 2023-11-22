@@ -6,8 +6,8 @@ export default {
     data() {
         return {
             base_url: 'http://127.0.0.1:8000',
-            api_url: '/api/projects',
-            projects: [],
+            api_url: '/api/projects/latest',
+            projects: null,
         };
     },
     methods: {
@@ -33,14 +33,14 @@ export default {
 <template>
     
 
-    <section class="project py-5">
+    <section class="project py-5" v-if="projects">
 
         <div class="container text-center">
         
             <h1 class="pb-5">Projects List</h1>
 
             <div class="row g-4">
-                <div class="col-4" v-for="project in projects.data">
+                <div class="col-4" v-for="project in projects">
 
                     <div class="card shadow h-100">
                         <img height="300" class="img-card-top rounded-top-1" :src="project.image" alt="">
@@ -61,7 +61,21 @@ export default {
 
     </section>
 
+    <div class="newsletter py-5 mt-5 bg-light text-dark">
+       <div class="container">
+         <h4 class="mb-3">Subscribe</h4>
+          <form action="">
 
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" name="email" id="email" class="form-control" placeholder="email@example.com" aria-describedby="emailHelper">
+              <small id="emailHelper" class="text-muted">Type your addreess here</small>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+       </div>
+      </div>
 
 </template>
 
